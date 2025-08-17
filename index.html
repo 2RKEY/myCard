@@ -7,40 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Silagin Vadim</h1>
-        <img class="logo" src="img/avatar.png" alt="my photo" width="240">
-    </header>
+    <header class="header"></header>
 
-    <main>
-        <p>Hello! I'm a future frontend developer.</p>
-        <nav>
-            <a href="https://www.twitch.tv/damnwhitee">Twitch</a>
-            <a href="https://github.com/2RKEY">Github</a>
-            <a href="https://t.me/silagin">Telegram</a>
-        </nav>
-        <button>Message me</button>
-        <h2 class="cats__name">Help me choose which of my cats is the coolest??</h2>
-        <section class="cats">
-            <div class="card">
-                <img class="card__image" src="img/cat1.jpg" alt="cosmos" width="160">
-                <h2 class="card__name">Cosmos</h2>
-                <p class="card__desk">So smart</p>
-                <button class="card__button">I choose you!</button>
-            </div>
-            <div class="card">
-                <img class="card__image" src="img/cat2.jpg" alt="kuzya" width="160">
-                <h2 class="card__name">Kuzya</h2>
-                <p class="card__desk">Baby boss</p>
-                <button class="card__button">I choose you!</button>
-            </div>
-            <div class="card">
-                <img class="card__image" src="img/cat3.jpg" alt="basya" width="160">
-                <h2 class="card__name">Basya</h2>
-                <p class="card__desk">Stupid and slicky</p>
-                <button class="card__button">I choose you!</button>
-            </div>
-        </section>
+    <main> 
+        <div class="mainWhrapper">
+            <h1 class="aboutName">Silagin Vadim</h1>
+            <section class="about">
+                <img class="logo" src="img/avatar.png" alt="my photo" width="240">
+                <p class="about__desk">Hello! I'm a future frontend developer.</p>
+                <nav class="social">
+                    <a class="nButton" href="https://www.twitch.tv/damnwhitee">Twitch</a>
+                    <a class="nButton" href="https://github.com/2RKEY">Github</a>
+                    <a class="nButton" href="https://t.me/silagin">Telegram</a>
+                </nav>
+                <!-- <div class="projects">
+                    <ul class="projects__view"><li class="projects item"></li>
+                        <li class="projects__item">coming soon</li>
+                        <li class="projects__item">coming soon</li>
+                        <li class="projects__item">coming soon</li>
+                        <li class="projects__item">coming soon</li>
+                    </ul>
+                </div> -->
+                <button class="about__button">Message me</button>
+            </section>
+            <h2 class="catsName">Help me choose which of my cats is the coolest??</h2>
+            
+            <section class="cats"> 
+                <div class="card">
+                    <img class="card__image" src="img/cat1.jpg" alt="cosmos" width="160">
+                    <h2 class="card__name">Cosmos</h2>
+                    <p class="card__desk">A big ginger sweetheart with a golden coat. Chill and playful, though sometimes too lazy for his own good. The perfect cuddle buddy</p>
+                    <button class="card__button">I choose you!</button>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="img/cat2.jpg" alt="kuzya" width="160">
+                    <h2 class="card__name">Kuzya</h2>
+                    <p class="card__desk">A sassy colorpoint princess with attitude. Playful and affectionate, but runs the house with an iron paw in a velvet glove. </p>
+                    <button class="card__button">I choose you!</button>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="img/cat3.jpg" alt="basya" width="160">
+                    <h2 class="card__name">Basya</h2>
+                    <p class="card__desk">A gruff Scottish Fold loner. Only tolerates his human - everyone else gets the death glare. Proud, aloof, and utterly unimpressed.</p>
+                    <button class="card__button">I choose you!</button>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>

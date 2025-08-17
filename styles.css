@@ -1,89 +1,196 @@
 body {
-            background-color: #cb997e;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            text-align: center;
-        }
-        .logo {
-            border-radius: 15px;
-        }
-        a {
-            color: #111;
-            text-decoration: none;
+    background-color: #cb997e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+.mainWhrapper {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 50px 1fr;
+    gap: 32px 0;
+}
+.logo {
+    border-radius: 15px;
+}
+.social {
+    padding-bottom: 20px;
+}
+.nButton {
+    font-size: 18px;
+    background: #54af13;
+    padding: 10px 28px;
+    color: #000000;
+    border: 1px solid #111;
+    border-radius: 5px;
+    cursor: pointer;
 
-            &:hover {
-                color: #d1d142;
-            }
-        }
-        nav {
-            padding-bottom: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            background: #6B705C;
-            color: #FFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+    &:hover {
+        color: #d1d142;
+    }
+}
+.about {
+    font-size: 20px;
+    grid-area: 2/1/3/2;
+    /* justify-self: start; */
+}
+.aboutName {
+    display: grid;
+    grid-area: 1/1/2/2;
+    align-self: center;
+    font-size: 30px;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    padding-bottom: 10px;
+}
+.about__button {
+    font-size: 18px;
+    padding: 10px 28px;
+    background: #6B705C;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 
-            &:hover {
-                background: #8f8f7a;
-            }
+    &:hover {
+        background: #8f8f7a;
+    }
+}
+.cats {
+    /* grid-area: 2/2/3/3; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.catsName {
+    font-size: 30px;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    /* text-transform: uppercase; */
+    /* grid-area: 1/2/2/3; */
+}
+.card {
+    display: grid;
+    grid-template-columns: 160px 260px;
+    grid-template-rows: 50px 1fr 50px;
+    gap: 0 10px;
+    background: linear-gradient(#cb997e, rgb(255, 255, 255));
+    padding: 30px;
+    border-radius: 20px;
+    align-items: start;
+}
+.card__image {
+    border-radius: 20px;
+    grid-area: 1/1/4/2;
+}
+.card__name {
+    border-radius: 5px;
+    background-color: #838db5;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0;
+    padding: 6px 20px;
+    grid-area: 1/2/2/3;
+}
+.card__desk {
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 0;
+    color: #000000;
+    padding: 10px 20px;
+    text-align: justify;
+    grid-area: 2/2/3/3;
+}
+.card__button {
+    font-size: 18px;
+    background-color: #2b2b1194;
+    padding: 16px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    grid-area: 3/2/4/3;
+}
+
+/* при разрешении 1024px и меньше */ 
+@media (max-width:1024px) {
+    .mainWhrapper {
+        gap: 12px 0;
+    }
+    .catsName {
+        font-size: 24px;
+    }  
+}
+
+/* при разрешении 768px и меньше */ 
+@media (max-width:768px) {
+    .mainWhrapper {
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 14px 0;
+    }
+    .about {
+        font-size: 20px;
+        grid-area: 2/1/3/2;
+    }
+    .aboutName {
+        font-size: 26px;
+    }
+    .about__desk {
+        font-size: 18px;
+        margin: 0;
+        padding: 20px 0 20px 0;
+    }   
+    .nButton {
+        font-size: 14px;
+        background: #54af13;
+        padding: 8px 18px;
+        color: #000000;
+        border: 1px solid #111;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            color: #d1d142;
         }
-        .cats {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        @media (max-width:360px) {
-            .cats {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
-            .card {
-                width: 200px;
-                border: solid #836019;
-                border-radius: 24px;
-                padding-bottom: 10px;
-            }
-            .card__image {
-                width: 200px;
-            }
-            .card__name {
-                font-size: 14px;
-                margin: 0;
-                background-color: #ffffff;
-                padding: 6px 20px;
-            }
-            .card__desk {
-                display: none;
-            }
-        }
-        .card {
-            background: linear-gradient(#cb997e, rgb(255, 255, 255));
-        }
-        .card__image {
-            border-radius: 20px;
-        }
-        .card__name {
-            font-size: 14px;
-            margin: 0;
-            background-color: #ffffff;
-            padding: 6px 20px;
-        }
-        .card__desk {
-            background-color: #0033ff;
-            margin: 0;
-            color: #fff;
-            padding: 10px 20px;
-        }
-        .card__button {
-            background-color: #2b2b1194;
-            padding: 6px auto;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-        }
+    }
+    .card {
+        gap: 0 5px;
+        padding: 15px;
+    }
+    .card__button {
+        font-size: 14px;
+        padding: 10px 2px;
+    }
+    .catsName {
+        font-size: 20px;
+    }
+}
+
+/* при разрешении 425px и меньше */ 
+@media (max-width:425px) {
+    .mainWhrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr;
+        gap: 2px 0;
+    }
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 26px 1fr 36px;
+    }
+    .card__desk {
+        font-size: 14px;
+    }
+    .card__button {
+        font-size: 14px;
+    }
+}
+        
